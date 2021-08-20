@@ -6,18 +6,18 @@ My idea was to just open the _/flag.txt_, read its content, print it to _stderr_
 I then tried to close the main function early with a ```}``` and ```#include "/flag.txt"``` afterwards, provoking a compilation error showing me the contents of the file in the error output. But no luck, ```include``` as well as the ```#```-symbol were considered dangerous, too.
 
 ## Solution
-My final solution was to bypass the source code filter by inserting the dangerous functions at compile time. The key here was to use macros and let the pre-processor concatenate the dangerous function names from two strings with the ```##```-directive to not trigger the source code filter. To counter the prohibition of the ```#```-symbol itself I used [digraphs](https://en.wikipedia.org/wiki/Digraphs_and_trigraphs#C).
+My final solution was to bypass the source code filter by inserting the dangerous functions at compile time. The key here was to use macros and let the preprocessor concatenate the dangerous function names with the ```##```-directive. To deal with the prohibition of the ```#```-symbol itself, I used [digraphs](https://en.wikipedia.org/wiki/Digraphs_and_trigraphs#C).
 
 ##### payload:
 ```C
-    flag();
+    leak_flag();
     return 1;
 }
 
 %:define OPEN(path, mode) fop%:%:en(path, mode)
 %:define SCAN(f, fmt, buf) fsca%:%:nf(f, fmt, buf)
 
-int flag() {
+int leak_flag() {
     char buf[128];
     FILE *f;
     f = OPEN("/flag.txt", "r");
