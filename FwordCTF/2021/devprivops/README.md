@@ -65,6 +65,6 @@ User user1 may run the following commands on 7c47d98c8907:
     (user-privileged) NOPASSWD: /home/user1/devops.sh
 ```
 
-So we execute the script as `sudo -u user-privileged ./devops.sh -d -p` and input the payload `id { cat flag.txt; };`, overwriting the `id` function with our malicious one. When the `-p` parameter block gets evaluated afterwards and our `id` is called, the flag gets exposed!
+So we execute the script as `sudo -u user-privileged ./devops.sh -d -p` and input the payload `id { cat flag.txt; }; #`, overwriting the `id` function with our malicious one. When the `-p` parameter block gets evaluated afterwards and our `id` is called, the flag gets exposed!
 
 > FwordCTF{W00w_KuR0ko_T0ld_M3_th4t_Th1s_1s_M1sdirecti0n_BasK3t_FTW}
