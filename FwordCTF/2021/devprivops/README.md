@@ -20,7 +20,7 @@ Let's escalate!
 ## Investigation
 By inspecting the shell script we learn that we can supply two parameters `-d` and `-p`.  
 
-The `-d` parameter sets the `deploy` variable and essentially lets us input the name of a function which gets defined by `eval` and exported afterwards.
+The `-d` parameter block essentially lets us input the name of a function which gets defined by `eval` and exported afterwards.
 
 ```bash
 if [[ deploy -eq 1 ]];then
