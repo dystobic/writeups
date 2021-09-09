@@ -35,6 +35,10 @@ ALLES!{d7pntdyqdkrtd7tdh0nkotd_bykodknt3rttctdotddd3_Psnjtd3tdcr3kotdts}
 ```
 
 After trying out a few combinations of which I thought they would make sense I got lucky with the flag being
-```
-ALLES!{py7h0n_byt3cod3_s3cr3ts}
-```
+
+> ALLES!{py7h0n_byt3cod3_s3cr3ts}
+
+##### Edit
+Only after the event ended I learned about python 3.6 opcodes always occupying two bytes so that
+opcodes without an argument leave space to hide 1 byte. There even is a tool called [stegosaurus](https://github.com/AngelKitty/stegosaurus) for
+embedding and reading payloads in python bytecode, which I could have used instead.
