@@ -6,13 +6,13 @@ as its SHA256 checksum apparently doesn't match with the original compiled scrip
 
 ## Investigation
 The most natural step was to decompile the bytecode and compare the source with the original. I used
-`decompyle6` for that. But except for a missing docstring they were basically the same. So he flag must
+`decompyle6` for that. But except for a missing docstring they were basically the same. So the flag must
 be hidden somewhere in the bytecode itself.
 
 ## Solution
-I dumped the bytecode to hex using `xxd` and as I looked through the ASCII representation I recognized
+I dumped the bytecode using `xxd` and as I looked through the ASCII representation I recognized
 the flag format.
-``
+```
 000002f0: 0383 0144 4190 035d 407d 0274 0174 0283  ...DA..]@}.t.t..    | A
 00000300: 0101 4c74 0364 047c 0017 4c64 0517 4583  ..Lt.d.|..Ld..E.    | L L E
 00000310: 0101 5374 0483 007d 0374 027c 0319 2164  ..St...}.t.|..!d    | S !
