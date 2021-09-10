@@ -34,7 +34,7 @@ which left me with
 ALLES!{d7pntdyqdkrtd7tdh0nkotd_bykodknt3rttctdotddd3_Psnjtd3tdcr3kotdts}
 ```
 
-After trying out a few combinations of which I thought they would make sense I got lucky with the flag being
+I then removed character by character, trying out a few combinations of which I thought they would make sense. I got lucky at some point with the flag being
 
 > ALLES!{py7h0n_byt3cod3_s3cr3ts}
 
