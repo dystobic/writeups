@@ -2,7 +2,7 @@
 **Pyimplant** was a misc challenge at ALLES! CTF 2021.  
 
 You were given the bytecode of a python script which had been altered in some way
-as its SHA256 checksum apparently doesn't match with the original compiled script anymore.
+as its SHA256 checksum apparently doesn't match the original compiled script anymore.
 
 ## Investigation
 The most natural step was to decompile the bytecode and compare the source with the original. I used
