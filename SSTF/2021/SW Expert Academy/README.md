@@ -1,5 +1,7 @@
 ## Intro
-Behind the url is a website where you should prove your algorithmic skills by solving some dice roll problem. At the bottom of the page is a text field where you can inject C-Code into the body of a main-function. Upon submitting the form, your algorithm is executed on the server side and tested against some input.
+**SW Expert Academy** was a web challenge at SSTF 2021.  
+
+You were given a URL where you should prove your algorithmic skills by solving some dice roll problem. At the bottom of the page is a text field where you can inject C-Code into the body of a main-function. Upon submitting the form, your algorithm is executed on the server side and tested against some input.
 
 ## Investigation
 By inspecting the source code of the page we learn that the flag can be found in a text file on the servers root directory. A quick look at the linked javascript also reveals that error responses, when received from the server, are alerted. That's how to possibly leak information from the server - and indeed, when writing to _stderr_ and exiting the program with an error, we are presented with the error output in the alert.
