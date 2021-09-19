@@ -1,5 +1,5 @@
 ## Intro
-**N1TP** was a crypto challenge at H@acktivityCon 2021 CTF.  
+**N1TP** was a crypto challenge at H@cktivityCon 2021 CTF.  
 
 You were given an encrypted flag and an encryption oracle.
 
