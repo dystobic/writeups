@@ -1,5 +1,5 @@
 ## Intro
-**SW Expert Academy** was a web challenge at SSTF 2021.  
+**SW Expert Academy** was a web challenge at Hacker's Playground 2021 by SSTF.  
 
 You were given a URL where you should prove your algorithmic skills by solving some dice roll problem. At the bottom of the page is a text field where you can inject C-Code into the body of a main-function. Upon submitting the form, your algorithm is executed on the server side and tested against some input.
 
