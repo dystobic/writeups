@@ -23,8 +23,8 @@ the `main` function, which is the only one as `info functions` showed.
 0x00000000004011fb <+102>:  call   0x401050 <system@plt>
 ...
 ```
-We can see here that whatever resides at `rbp-0x8` is compared to `0xdeadc0de` and if equals, `system("/bin/sh")` is executed. So the task is to overflow
-the buffer at `rbp-0x20` and write `0xdeadc0de` to `rbp-0x8` to spawn us a shell. Let's set a breakpoint right before the compare and run the program
+We can see here that whatever resides at `rbp-0x8` is compared to `0xdeadc0de` and if equals, `system("/bin/sh")` is executed. So the goal is to overflow
+the buffer at `rbp-0x20` and write `0xdeadc0de` to `rbp-0x8` - which initially is set to `0` - to spawn us a shell. Let's set a breakpoint right before the compare and run the program
 with `AAAAAAAA` as input.  
 
 ```
