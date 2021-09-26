@@ -64,7 +64,7 @@ Maybe this code isn't so dead...
 ... and we've successfully overflowed the buffer satisfying the compare to get our shell. From here we can just execute `cat flag.txt`
 to get the flag.
 
-See [exploit](./exploit.py) for a python implementation of the exploit.  
+See [exploit](./exploit.py) for an automation of the exploit written in python.  
 
 > DUCTF{y0u_br0ught_m3_b4ck_t0_l1f3_mn423kcv}
 
