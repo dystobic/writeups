@@ -55,4 +55,6 @@ What is your name?
 Hello there, DUCTF{f0rm4t_5p3c1f13r_m3dsg!}
 ```
 
+See [exploit](./exploit.py) for an automation of the exploit in python.
+
 > DUCTF{f0rm4t_5p3c1f13r_m3dsg!}
