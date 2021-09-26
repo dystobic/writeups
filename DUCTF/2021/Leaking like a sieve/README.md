@@ -1,5 +1,5 @@
 ## Intro
-**Leaking like a sieve** was a pwn challenge at DUCTF 2021.  
+**Leaking like a sieve** was a pwn challenge at DownUnderCTF 2021.  
 
 You were given a binary to exploit.
 
