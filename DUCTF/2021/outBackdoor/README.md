@@ -81,9 +81,8 @@ Continuing.
 W...w...Wait? Who put this backdoor out back here?
 ```
 
-When running the exploit remotely, though, the program crashed because of the `system` call implementation in the libc there uses the `movaps` instruction
-which expects the stack to be 16-byte aligned, but we borked that before. In order to deal with that issue I overwrote the return address of `main` with
-the address of `outBackdoor + 1`, skipping the first `push rbp` instruction which fixes the problem.
+When running the exploit remotely, though, the program crashed because of the `movaps` issue expecting the stack to be 16-byte aligned.
+In order to deal with that issue I overwrote the return address of `main` with the address of `outBackdoor + 1`, skipping the first `push rbp` instruction.
 
 See [exploit](./exploit.py) for an automation of the exploit written in python.
 
