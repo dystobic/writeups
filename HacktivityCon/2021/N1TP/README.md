@@ -1,10 +1,10 @@
 ## Intro
 **N1TP** was a crypto challenge at H@cktivityCon 2021 CTF.  
 
-You were given an encrypted flag and an encryption oracle. From the context of the challenge one can deduce the applied encryption scheme here is a [One-Time Pad](https://en.wikipedia.org/wiki/One-time_pad).
+You were given an encrypted flag and an encryption oracle.
 
 ## Investigation
-A OTP is cryptographically secure unless being re-used. If so, given an encryption oracle and a ciphertext `C = M ^ K` where `K` is the OTP , one can recover the original message `M` by simply calculating `C1 = M1 ^ K` and then:  
+From the context of the challenge one can deduce the applied encryption scheme here is a [One-Time Pad](https://en.wikipedia.org/wiki/One-time_pad). A OTP is cryptographically secure unless being re-used. If so, given an encryption oracle and a ciphertext `C = M ^ K` where `K` is the OTP , one can recover the original message `M` by simply calculating `C1 = M1 ^ K` and then:  
 
 ```
 C ^ C1 ^ M1 = M ^ K ^ M1 ^ K ^ M1 = M
