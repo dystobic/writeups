@@ -1,4 +1,3 @@
-## Challenge
 ___
 #### Break me!
 _(crypto, easy, 100 pts, 163 solves)_
