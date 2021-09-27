@@ -1,7 +1,15 @@
-## Intro
-**Leaking like a sieve** was a pwn challenge at DownUnderCTF 2021.  
+___
+# Leaking like a sieve
+_(pwn, beginner, 100 pts, 419 solves)_
 
-You were given a binary to exploit.
+This program I developed will greet you, but my friend said it is leaking data like a sieve, what did I forget to add?
+
+Author: xXl33t_h@x0rXx
+
+`nc pwn-2021.duc.tf 31918`
+
+[hellothere](./hellothere)
+___
 
 ## Investigation
 `checksec` showed that NX and PIE are enabled for the binary. Following the `ltrace` I learned the flow of the program and found no potential
