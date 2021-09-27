@@ -62,8 +62,8 @@ address we want to overwrite with the address of `outBackdoor` which is `0x00000
 
 So we can just
 - fill the buffer at `rbp-0x10` with 16 bytes
-- overwrite the `rbp` with 8 bytes
-- overwrite the return address of `main` with `0x00000000004011d7` pointing `rip` to `outBackdoor`.
+- overwrite `rbp` with 8 bytes
+- overwrite the return address of `main` with `0x00000000004011d7` making `rip` point to `outBackdoor`.
 
 ## Solution
 Let's pull off a quick ruby exploit for proof of concept.
