@@ -82,8 +82,8 @@ W...w...Wait? Who put this backdoor out back here?
 ```
 ___
 ##### Note
-When running the exploit remotely the program crashes because of the so called _movaps issue_.
-`movaps` is an assembly instruction that is used in some syscalls like `do_system` and it expects the stack to be 16-byte aligned. Because we just brutally overwrote the return address of `main` instead of using a clean `call outBackdoor` our stack at the point of calling into `system` is not aligned correctly.
+When running the exploit remotely the program segfaults because of the so called [movaps issue](https://ropemporium.com/guide.html).
+`movaps` is an assembly instruction that is used in some syscalls like `do_system()` and it expects the stack to be 16-byte aligned. Because we just brutally overwrote the return address of `main` instead of using a clean `call outBackdoor` our stack at the point of calling into `system()` is not aligned correctly.
 To deal with that I used the address of `outBackdoor + 1` in the exploit instead - skipping the first `push rbp` instruction and therefore keeping the stack alignment intact.
 ___
 
