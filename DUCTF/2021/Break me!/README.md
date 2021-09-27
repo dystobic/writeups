@@ -1,6 +1,6 @@
 ___
 # Break me!
-_(crypto, easy, 100 pts, 163 solves)_
+_(crypto, easy, 100 points, 163 solves)_
 
 AES encryption challenge.
 
