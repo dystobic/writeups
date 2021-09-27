@@ -1,7 +1,15 @@
-## Intro
-**outBackdoor** was a pwn challenge at DownUnderCTF 2021.  
+___
+# outBackdoor
+_(pwn, easy, 100 points, 361 solves)_
 
-You were given a binary to exploit.
+Fool me once, shame on you. Fool me twice, shame on me.
+
+Author: xXl33t_h@x0rXx
+
+`nc pwn-2021.duc.tf 31921`
+
+[outBackdoor](./outBackdoor)
+___
 
 ## Investigation
 `checksec` showed that besides NX no other stack mitigations are present, especially no PIE. Following the `ltrace` I learned the relatively simple flow of the program and found
