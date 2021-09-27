@@ -1,6 +1,6 @@
 ___
 # Substitution Cipher I
-_(crypto, beginner, 100 pts, 362 solves)_
+_(crypto, beginner, 100 points, 362 solves)_
 
 Just a simple substitution cipher to get started...
 
