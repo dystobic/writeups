@@ -1,6 +1,6 @@
 ___
 # Leaking like a sieve
-_(pwn, beginner, 100 pts, 419 solves)_
+_(pwn, beginner, 100 points, 419 solves)_
 
 This program I developed will greet you, but my friend said it is leaking data like a sieve, what did I forget to add?
 
