@@ -1,7 +1,13 @@
-## Intro
-**Substitution Cipher I** was a crypto challenge at DownUnderCTF 2021.  
+___
+# Substitution Cipher I
+_(crypto, beginner, 100 pts, 362 solves)_
 
-You were given the encrypted flag and a .sage file.
+Just a simple substitution cipher to get started...
+
+Author: joseph#8210
+
+[substitution-cipher-i.sage](substitution-cipher-i.sage) | [output.txt](output.txt)
+___
 
 ## Investigation
 The encryption scheme found in the source is a trivial substitution cipher based on the polynomial
