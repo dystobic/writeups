@@ -1,7 +1,15 @@
-## Intro
-**deadcode** was a pwn challenge at DownUnderCTF 2021.  
+___
+# deadcode
+_(pwn, beginner, 100 points, 528 solves)_
 
-You were given a binary to exploit.
+I'm developing this new application in C, I've setup some code for the new features but it's not (a)live yet.
+
+Author: xXl33t_h@x0rXx
+
+`nc pwn-2021.duc.tf 31916`
+
+[deadcode](./deadcode)
+___
 
 ## Investigation
 `checksec` showed that besides NX no other stack mitigations are present. Following the `ltrace` I learned the relatively simple flow of the program and found a
