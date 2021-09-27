@@ -60,8 +60,10 @@ We see that the buffer at `rbp-0x10` which is at `0x7fffffffdec0` itself takes 1
 Then follows the `rbp` at `0x7fffffffded0`. On a 64-bit system this address takes another 8 bytes and directly after follows the `main` function's return
 address we want to overwrite with the address of `outBackdoor` which is `0x00000000004011d7` - lucky for us the binary isn't PIE enabled.  
 
-So we can just fill the buffer at `rbp-0x10` with 16 bytes, overwrite the `rbp` next with another 8 bytes and then overwrite
-the return address of `main` with the 64-bit address of `outBackdoor` which is `0x00000000004011d7`.
+So we can just
+- fill the buffer at `rbp-0x10` with 16 bytes
+- overwrite the `rbp` with 8 bytes
+- overwrite the return address of `main` with `0x00000000004011d7` pointing `rip` to `outBackdoor`.
 
 ## Solution
 Let's pull off a quick ruby exploit for proof of concept.
