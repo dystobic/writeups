@@ -15,7 +15,7 @@ nc overly.uniquename.xyz 2052
 ___
 
 ## Investigation
-The program is vulnerable to a buffer overflow and a standard ret2libc attack.
+ _TODO writeup_
 
 ## Solution
 See [exploit](./exploit.py) for an automation of the exploit written in python.
