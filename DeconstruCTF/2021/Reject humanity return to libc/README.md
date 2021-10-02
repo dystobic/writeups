@@ -18,6 +18,6 @@ ___
 The program is vulnerable to a buffer overflow and a standard ret2libc attack.
 
 ## Solution
-See [exploit](./exploit.py) for an implementation of the exploit written in python.
+See [exploit](./exploit.py) for an automation of the exploit written in python.
 
 > dsc{r37URN_70_M0nk3}
