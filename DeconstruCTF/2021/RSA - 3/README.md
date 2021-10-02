@@ -13,7 +13,7 @@ ___
 ## Investigation
 From the challenge description it can be deduced that `mykey.pub` is a [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) public key.
 So I first extracted the modulus `n` and public exponent `e` from it with `openssl rsa -in mykey.pub -noout -text -pubin`. Looking at a _very_ big `e`
-I took an educated guess that maybe `d` would be sufficently small (`< 1/3n^(1/4)), which could then be exploited by leveraging
+I took an educated guess that maybe `d` would be sufficently small (namely `d < 1/3n^(1/4)`), which could then be exploited by leveraging
 [Wiener's Attack](https://en.wikipedia.org/wiki/Wiener%27s_attack).
 
 ## Solution
