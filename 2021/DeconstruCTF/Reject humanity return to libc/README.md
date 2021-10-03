@@ -38,4 +38,6 @@ Not using some of `pwntools` functionality in the exploit like ELF loading & dyn
 was intentionally. I explicitely wanted to do some manual work and preparation of the attack in order
 to consolidate my knowledge.
 
+After having access to the target system, there's a `disarm_dispencer.sh` script in the current working directory. Execute it and it prints out the flag.
+
 > dsc{r37URN_70_M0nk3}
