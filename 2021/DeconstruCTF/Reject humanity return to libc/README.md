@@ -33,11 +33,11 @@ offsets, strings and ROP gadgets needed for the exploit can be easily obtained i
 ## Solution
 See [exploit](./exploit.py) for an automation of the exploit written in python.
 
-###### Disclaimer
-Not using some of `pwntools` functionality in the exploit like ELF loading & dynamically finding offsets or building ROP chains
-was intentionally. I explicitely wanted to do some manual work and preparation of the attack in order
-to consolidate my knowledge.
-
 After having access to the target system, there's a `disarm_dispencer.sh` script in the current working directory. Execute it and it prints out the flag.
 
 > dsc{r37URN_70_M0nk3}
+
+###### Disclaimer
+Not using some of `pwntools` functionality in the exploit like ELF loading & dynamically finding addresses and offsets or building ROP chains
+was intentional. I explicitely wanted to do some manual work and preparation of the attack in order
+to consolidate my knowledge.
