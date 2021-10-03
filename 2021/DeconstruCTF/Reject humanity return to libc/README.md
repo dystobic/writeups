@@ -21,7 +21,7 @@ the insecure `gets` function. The program is pretty minimal and does not reward
 us with any other function to integrate in our exploit - so we are going to leverage
 a classical [return-to-libc attack](https://en.wikipedia.org/wiki/Return-to-libc_attack).
 
-The exploit is divided into two different stages:
+The exploit is done in two stages:
 1. Pretending that ASLR is enabled on the target system, we first leak the absolute address
 of `puts@libc` in order to derive the base address of `libc` from it at runtime.
 2. Using the base address of `libc` we calculate the absolute addresses of `system`
