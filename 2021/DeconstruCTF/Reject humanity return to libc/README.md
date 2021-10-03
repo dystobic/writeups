@@ -14,34 +14,28 @@ nc overly.uniquename.xyz 2052
 [challenge](./challenge) | [libc-2.31.so](./lib/x86_64-linux-gnu/libc-2.31.so) | [dispenser_login.c](./dispenser_login.c)
 ___
 
-###### Disclaimer
-Not using some of `pwntools` functionality in the exploit like ELF loading & dynamically finding offsets or building ROP chains
-was intentionally. I explicitely wanted to do some manual work and preparation of the attack in order
-to consolidate my knowledge.
-
 ## Investigation
 Looking at the provided [source](./dispenser_login.c) of the program we can spot a
 common buffer overflow vulnerability in the `disarm_dispenser` function caused by
-the insecure `gets` function. The program is pretty minimal and does not reward
-us with any other function to integrate in our exploit - so we are going to leverage
+the insecure `gets` function.
+The program is pretty minimal and does not contain any other function to use within our exploit - so we are going to leverage
 a classical [return-to-libc attack](https://en.wikipedia.org/wiki/Return-to-libc_attack).
-___
-###### Note
-It seems the stack is not NX enabled on the binary, so maybe a simple shellcode injection would
-have done the job, too.
-___
 
-The exploit is divided into two different stages:
+The exploit works in two stages:
 1. Pretending that ASLR is enabled on the target system, we first leak the absolute address
 of `puts@libc` in order to derive the base address of `libc` from it at runtime.
 2. Using the base address of `libc` we calculate the absolute addresses of `system`
 and `/bin/sh` in `libc` to spawn a shell.
 
-As PIE is disabled on the binary and the [libc](./lib/x86_64-linux-gnu/libc-2.31.so) is provided, all the addresses,
-offsets and ROP gadgets needed in the exploit can be obtained e.g. using `objdump` and
-`ROPGadget`.
+As PIE is disabled on the binary and the [libc](./lib/x86_64-linux-gnu/libc-2.31.so) in use on the target system is provided, all the addresses,
+offsets, strings and ROP gadgets needed for the exploit can be easily obtained (e.g. using `objdump`, `strings` and `ROPGadget`).
 
 ## Solution
 See [exploit](./exploit.py) for an automation of the exploit written in python.
+
+###### Disclaimer
+Not using some of `pwntools` functionality in the exploit like ELF loading & dynamically finding offsets or building ROP chains
+was intentionally. I explicitely wanted to do some manual work and preparation of the attack in order
+to consolidate my knowledge.
 
 > dsc{r37URN_70_M0nk3}
