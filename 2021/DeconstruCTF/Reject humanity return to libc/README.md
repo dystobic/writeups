@@ -28,7 +28,7 @@ of `puts@libc` in order to derive the base address of `libc` from it at runtime.
 and `/bin/sh` in `libc` to spawn a shell.
 
 As PIE is disabled on the binary and the [libc](./lib/x86_64-linux-gnu/libc-2.31.so) in use on the target system is provided, all the addresses,
-offsets, strings and ROP gadgets needed for the exploit can be easily obtained (e.g. using `objdump`, `strings` and `ROPGadget`).
+offsets, strings and ROP gadgets needed for the exploit can be easily obtained in advance (e.g. using `objdump`, `strings` and `ROPGadget`).
 
 ## Solution
 See [exploit](./exploit.py) for an automation of the exploit written in python.
