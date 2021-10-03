@@ -31,7 +31,7 @@ It seems the stack is not NX enabled on the binary, so maybe a simple shellcode 
 have done the job, too.
 ___
 
-The exploit gets divided into two different stages:
+The exploit is divided into two different stages:
 1. Pretending that ASLR is enabled on the target system, we first leak the absolute address
 of `puts@libc` in order to derive the base address of `libc` from it at runtime.
 2. Using the base address of `libc` we calculate the absolute addresses of `system`
