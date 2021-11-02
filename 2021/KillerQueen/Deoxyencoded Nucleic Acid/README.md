@@ -6,7 +6,7 @@ ___
 
 # Investigation
 
-The challenge description was emphasizing that the _four_ nucleobases form an encoding. I recognized that the length of the dna sequence is `0 % 4` and took an educated guess that a sequence of _four_ nucleobases encodes a character. As a character has 1 Byte I predicted A, G, C and T each could represent two bits. I know the flag starts with the letter `k` whose ordinal value is binary `01 10 10 11` and the dna sequence starts with `TGGC` - which matches
+The challenge description was emphasizing that the _four_ nucleobases form an encoding. I recognized that the length of the dna sequence is `0 % 4` and took an educated guess that a sequence of _four_ nucleobases encodes a character. As a character has 1 Byte I predicted `A`, `G`, `C` and `T` each could represent two bits. I know the flag starts with the letter `k` whose ordinal value is binary `01 10 10 11` and the dna sequence starts with `TGGC` - which matches
 
 - `T` with `01`
 - `G` with `10`
