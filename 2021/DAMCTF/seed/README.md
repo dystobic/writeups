@@ -1,5 +1,5 @@
 ___
-# cookie-monster
+# seed
 _(rev, 249 points, 342 solves)_
 
 Having a non-weak seed when generating "random" numbers is super important! Can you figure out what is wrong with this PRNG implementation?
