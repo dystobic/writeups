@@ -1,4 +1,4 @@
-`2021` `DAMCTF` `rev` `prng` `seed`  
+`2021` `Dam CTF` `rev` `prng` `seed`  
 
 # seed
 [seed.py](./seed.py) | [log.txt](./log.txt)  
