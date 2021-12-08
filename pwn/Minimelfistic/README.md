@@ -1,4 +1,4 @@
-`2021` `HTB Cyber Santa is Coming to Town` `pwn` `bof` `rop` `ret2csu` `ret2libc`  
+`2021` `HTB Cyber Santa is Coming to Town` `pwn` `bof` `rop` `ret2libc` `ret2csu`  
 
 # Minimelfistic
 [minimelfistic](./minimelfistic) | [libc.so.6](./libc.so.6)
