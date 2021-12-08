@@ -1,4 +1,4 @@
-`2021` `	DeconstruCT.F` `crypto` `rsa` `prime factorization`  
+`2021` `DeconstruCT.F` `crypto` `rsa` `prime factorization`  
 
 # RSA - 1
 [big_numbers.txt](./big_numbers.txt)  
